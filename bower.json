@@ -1,0 +1,14 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "picturefill": "~1.2.0",
+    "FitText.js": "",
+
+    "hint.css": "~1.3.0",
+    "less-prefixer": ""
+  },
+  "devDependencies": {}
+}
