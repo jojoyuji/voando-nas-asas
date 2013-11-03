@@ -23,6 +23,37 @@
           <!-- build:js scripts/vendor/modernizr.js -->
           <script src="bower_components/modernizr/modernizr.js"></script>
           <!-- endbuild -->
+
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+          <script type="text/javascript" charset="utf-8">
+            var map;
+            function initialize() {
+              var mapOptions = {
+                zoom: 10,
+                center: new google.maps.LatLng(-20.570899, -54.576902),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+              map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+              var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-20.670899, -54.576902),
+                title: "",
+                map: map
+              });
+              var infowindow = new google.maps.InfoWindow(), marker;
+               
+              google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                          infowindow.setContent("É aqui! (acampamento Metodista)");
+                          infowindow.open(map, marker);
+                      }
+              })(marker))
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+          </script>
+
         </head>
         <body>
           <!--[if lt IE 10]>
@@ -180,6 +211,7 @@
                   </div>
                 </div>
                 <div class="map">
+                  <div id='map-canvas'></div>
                 </div>
               </div>
             </section>
@@ -479,6 +511,7 @@
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
         <script type="text/javascript" charset="utf-8">
           /**
           * @license
