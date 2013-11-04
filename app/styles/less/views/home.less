@@ -1,3 +1,4 @@
+
 .header{
   .top-header{
     background:  @cement;
@@ -167,6 +168,7 @@
 
 .prepare-yourself{
   background: @gray;
+  padding-top: 20px ;
   .sample{
     float: right;
     .smp-water{
@@ -177,11 +179,21 @@
     }
   }
   bloquote{
+    em{
+      font-weight: bold ;
+      font-style:  normal;
+      text-align: right ;
+      float: right;
+      clear: both ;
+      margin-top: 20px ;
+      margin-bottom: 80px ;
+    }
   }
 }
 
 .who-can{
   background: @cement;
+  padding: 10px 0;
   .sample{
     float: left;
     width: 314px;
@@ -196,9 +208,16 @@
       height: inherit;
     }
   }
+  h2{
+    color: @gray ;
+    padding-left: 20px ;
+    float: left;
+  }
   bloquote{
     float: left;
     width: 500px;
+    margin-left: 20px ;
+    color: @gray;
     display: block ;
   }
 }
@@ -206,9 +225,18 @@
 .where{
   background: @blood;
   color: @w ;
+  padding: 30px 0;
   .aside{
     float: left;
     width: 300px;
+    p{
+      font-size: 25px;
+      line-height: 40px ;
+    }
+  }
+  h2{
+    padding-top: 20px ;
+
   }
   .map{
     float: right;
@@ -223,21 +251,18 @@
       height: 100%;
     }
   }
-  bloquote{
-    float: left;
-    width: 500px;
-    display: block ;
-  }
 }
 
 .when{
   background: @w;
+  padding-bottom: 50px ;
+  padding-top: 30px ;
   .sample{
     float: left;
     width: 306px;
     height: 307px;
     position: relative ;
-    margin-right: 30px ;
+    margin-right: 50px ;
     .smp-calendar{
       position: absolute ;
       top: -50px ;
@@ -249,12 +274,13 @@
   bloquote{
     float: left;
     width: 500px;
-    display: block ;
   }
 }
 
 .investment{
   background: @dblue;
+  padding-bottom: 50px ;
+  padding-top: 30px ;
   color: @w ;
   .sample{
     float: right;
@@ -280,6 +306,7 @@
     width: 415px;
     height: 215px;
     float: right;
+    padding: 0px 20px ;
     color: @w ;
 
 
@@ -288,12 +315,14 @@
 
 .subscribe{
   background: @gray;
+  padding-bottom: 80px ;
+  padding-top: 30px ;
   .sample{
     float: left;
     width: 298px;
     height: 298px;
     position: relative ;
-    margin-right: 30px ;
+    margin-right: 80px ;
     .smp-pencil{
       position: absolute ;
       top: -50px ;
@@ -304,8 +333,50 @@
   }
   bloquote{
     float: left;
-    width: 500px;
+    width: 565px;
     display: block ;
+    position: relative ;
+    .sub-sheet{
+      background: @w ;
+      box-shadow: 0px 2px 5px  rgba(0,0,0,.3) ;
+      display: block ;
+      padding: 10px 20px;
+      padding-bottom: 50px ;
+      .ss-q-item-label{
+        div{
+          font-weight: bold ;
+          display: inline;
+        }
+      }
+      .ss-q-help{
+        font-size: 12px;
+        color: @iron ;
+        display: inline;
+      }
+      input[type="submit"]{
+        background: @teal ;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        line-height: 30px ;
+        display: block ;
+        box-sizing: content-box;
+        border: 0;
+        color: @w ;
+        position: absolute ;
+        bottom: 20px ;
+        right: 20px ;
+        &:hover{
+          background: lighten(@teal, 5%) ;
+        }
+        &:active{
+          background: @teal;
+          bottom: 18px;
+        }
+
+
+      }
+    }
   }
 }
 
@@ -429,3 +500,46 @@
   }
 
 }
+
+
+body.done{
+  background: @teal ;
+}
+.done{
+  display: block ;
+  overflow: hidden ;
+  margin-top: 160px ;
+  .done-wrapper{
+    max-width: 800px;
+    padding: 20px ;
+    padding-bottom: 60px ;
+    margin: 10px auto ;
+    color: @w;
+    h1{
+      margin-top: 0px ;
+    }
+    .sample{
+      float: left;
+      width: 214px;
+      height: 287px;
+      position: relative ;
+      margin-right: 80px ;
+      margin-top: 20px ;
+      .smp-checkmark{
+        position: absolute ;
+        background-image:  url('../images/smp-checkmark.png') ;
+      width: 214px;
+      height: 187px;
+      }
+    }
+  }
+
+}
+
+.done-footer{
+  bottom: 0px ;
+  left: 0px ;
+  right: 0px ;
+  position: fixed ;
+}
+
