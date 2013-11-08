@@ -35,15 +35,20 @@
           <script type="text/javascript" charset="utf-8">
             var map;
             function initialize() {
+
+              var lat = -20.68880763350614 , 
+              longi = -54.586645578919025 ;
+
               var mapOptions = {
                 zoom: 10,
-                center: new google.maps.LatLng(-20.570899, -54.576902),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                center: new google.maps.LatLng(lat, longi),
+                maptype: 'hybrid',
+                mapTypeId: google.maps.MapTypeId.HYBRID
               };
               map = new google.maps.Map(document.getElementById('map-canvas'),
               mapOptions);
               var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(-20.670899, -54.576902),
+                position: new google.maps.LatLng(lat, longi),
                 title: "",
                 map: map
               });
@@ -68,7 +73,6 @@
           <![endif]-->
 
           <div class="ui grid">
-
             <a name="header"></a>
             <header class="ui header">
               <div class="row top-header">
@@ -201,8 +205,16 @@
                   <ul>
                     <li>Jovens a partir de 14 anos, acompanhados por seus pastores.</li>
                     <li>Pastores de jovens.</li>
-                    <li>Autorização escrita dos pais ou responsáveis para menores de 18 anos. Deve ser assinada e enviada em anexo para o e-mail contato@voandonasasasdoespirito.com (<a href="modelo.pdf">fazer download do modelo</a>)</li>
                     <li>Ter recebido a Jesus e passado pelo novo nascimento.</li>
+                    <li>
+                      <p><em>Autorização escrita dos pais ou responsáveis </em>para menores de 18 anos.</p> 
+                      <p>Deve ser assinada e enviada em anexo <em>juntamente com a carta do pastor</em>,  para o e-mail <em>contato@voandonasasasdoespirito.com</em></p> 
+                      <ul>
+                        <li>autorização dos pais (<a href="files/autorizacao_pais.docx">download</a>)</li>
+                        <li>carta do pastor      (<a href="files/recomendacao_pr.docx">download</a>)</li>
+                      </ul>
+
+                    </li>
                   </ul>
                   </bloquote>
                 </div>
@@ -218,7 +230,13 @@
                   <div>
                     <p>Campo Grande - MS</p>
                     <p>Acampamento Metodista</p>
-                    <p>(<a>como chegar</a>)</p>
+                    <p>
+                      <ul>
+                        <li>Rodovia 163, KM 454 <em>entra a direita</em> até a <em>Colônia de Férias</em></li>
+                        <li>Chegando na entrada da Colonia Ferias <em>contornar a mesma pelo lado direito</em> seguindo a placa do Hotel do Lago.</li>
+                          <li>Chegando no final da Rua dobrar a direita. Entrada a 50m Esquerda.</li> 
+                      </ul>
+                    </p>
                   </div>
                 </div>
                 <div class="map">
@@ -273,10 +291,11 @@
                     </p>
                     </bloquote>
                     <div class='account-info'>
-                      <p>Ag: XXXX-X</p>
-                      <p>CC: 23123312</p>
-                      <p>Tituloar: 1231313123</p>
-                      <p>CNPJ: 1231231.13123</p>
+                      <p>Caixa Econômica Federal</p>
+                      <p>Ag: 1108</p>
+                      <p>operação: 003</p>
+                      <p>CC: 3058-3</p>
+                      <!--<p>CNPJ: 1231231.13123</p>-->
                     </div>
                   </div>
 
@@ -367,7 +386,7 @@
                               <div class="required-message">Esta pergunta é obrigatória</div>
 
                           </div></div></div> <div class="ss-form-question errorbox-good">
-                          <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_269073700"><div class="ss-q-title">Telefone
+                          <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_269073700"><div class="ss-q-title">Celular / Telefone 
                                   <label for="itemView.getDomIdToLabel()" aria-label="(campo obrigatório)"></label>
                                   <span class="ss-required-asterisk">*</span></div>
                                 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
@@ -388,7 +407,7 @@
                               <div class="required-message">Esta pergunta é obrigatória</div>
 
                           </div></div></div> <div class="ss-form-question errorbox-good">
-                          <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1279395091"><div class="ss-q-title">Telefone 
+                          <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1279395091"><div class="ss-q-title">Celular / Telefone 
                                 </div>
                                 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
                               <input type="text" name="entry.1279395091" value="" class="ss-q-short" id="entry_1279395091" dir="auto" title="">
@@ -416,7 +435,7 @@
                               <div class="required-message">Esta pergunta é obrigatória</div>
 
                           </div></div></div> <div class="ss-form-question errorbox-good">
-                          <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_503217255"><div class="ss-q-title">Telefone de contato
+                          <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_503217255"><div class="ss-q-title">Celular / Telefone de contato
                                 </div>
                                 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
                               <input type="text" name="entry.503217255" value="" class="ss-q-short" id="entry_503217255" dir="auto" title="">
@@ -430,6 +449,10 @@
 
 
                         <div class="ss-item ss-navigate"></div></ol>
+                      <div style="margin: 50px 15px 20px 15px">
+                        OBS: 
+                        É necessário  também enviar a <em><a href="files/recomendacao_pr.docx">carta do pastor/líder</a></em> juntamente com a <em><a href="files/autorizacao_pais.docx">autorização dos pais</a></em> para o email <i>contato@voandonasasasdoespirito.com.br</i>:
+                      </div>
                       <input type="submit" name="submit" value="Enviar" id="ss-submit">
                       <div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div>
                     </form>

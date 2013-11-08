@@ -33,6 +33,25 @@ body{
  padding: 0px !important;
 }
 
+a{
+  color: @teal ;
+  &:hover{
+    color: @blood ;
+    }
+  &:active{
+    color: @orange  ;
+  }
+
+  &.link-orange{
+    color: @dbox ;
+  }
+}
+
+.inside{
+  list-style-position: inside;
+}
+
+
 @import "less/vendor/google.less";
 
 @import "less/vendor/responsive.less";
