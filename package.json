@@ -1,6 +1,7 @@
 {
-  "name": "Voando names Asas do Espírito",
+  "name": "voando",
   "version": "1.0.0",
+  "repository": {},
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
